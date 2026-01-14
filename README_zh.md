@@ -28,7 +28,7 @@
 - `egps-base`：基础工具与核心基础设施
 - `egps-shell`：用于发布/启动主框架的壳工程；GUI 主框架（**未开源**，但可免费使用）
 - `egps-pathway.evol.browser`：应用模块（Pathway Evolution Browser）
-- `egps-TQTools`：另一个应用模块
+- `egps-SeqTools`：另一个应用模块
 
 他们的依赖关系如下：
 
@@ -36,7 +36,7 @@
 graph TD
   base[egps-base] --> shell["egps-shell（包含GUI主框架）"]
   shell --> pe[egps-pathway.evol.browser]
-  shell --> tq[egps-TQTools]
+  shell --> seq[egps-SeqTools]
 ```
 
 本集合中的其他独立应用模块（示例）：
@@ -52,7 +52,7 @@ graph TD
 ```mermaid
 graph TD
   shell["egps-shell（GUI主框架）"] --> pe[egps-pathway.evol.browser]
-  shell --> tq[egps-TQTools]
+  shell --> seq[egps-SeqTools]
   shell --> mut[egps-mutationPre]
   shell --> venn[egps-vennplot]
   shell --> heat[egps-heatmap]

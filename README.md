@@ -28,7 +28,7 @@ Main stream modules (typical dependency order):
 - `egps-base`: base utilities and infrastructure
 - `egps-shell`: a publish/launcher wrapper; includes the GUI mainframe (**not open source**, but free to use)
 - `egps-pathway.evol.browser`: application module (Pathway Evolution Browser)
-- `egps-TQTools`: another application module
+- `egps-SeqTools`: another application module
 
 Their dependencies are roughly:
 
@@ -36,7 +36,7 @@ Their dependencies are roughly:
 graph TD
   base[egps-base] --> shell["egps-shell (GUI mainframe)"]
   shell --> pe[egps-pathway.evol.browser]
-  shell --> tq[egps-TQTools]
+  shell --> seq[egps-SeqTools]
 ```
 
 Other standalone application modules in this collection (examples):
@@ -47,12 +47,12 @@ Other standalone application modules in this collection (examples):
 - `egps-chorddiagram`: chord diagram
 - `egps-sanky`: Sankey plot
 
-These modules are at the same level as `egps-pathway.evol.browser` / `egps-TQTools`.
+These modules are at the same level as `egps-pathway.evol.browser` / `egps-SeqTools`.
 
 ```mermaid
 graph TD
   shell["egps-shell (GUI mainframe)"] --> pe[egps-pathway.evol.browser]
-  shell --> tq[egps-TQTools]
+  shell --> seq[egps-SeqTools]
   shell --> mut[egps-mutationPre]
   shell --> venn[egps-vennplot]
   shell --> heat[egps-heatmap]
