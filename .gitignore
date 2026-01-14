@@ -1,0 +1,104 @@
+# =========================
+# 编译产物
+# =========================
+*.class
+*.log
+*.ctxt
+*.jar
+!lib/*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Maven / Gradle 构建目录
+target/
+build/
+out/
+
+# =========================
+# 项目核心内容的屏蔽
+# =========================
+mainframe/
+wntevol/
+
+# =========================
+# 临时文件
+# =========================
+egps_version.json
+
+# =========================
+# IDE 配置
+# =========================
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Eclipse
+.settings/
+.project
+.classpath
+.factorypath
+
+# VS Code
+.vscode/
+
+# NetBeans
+nbproject/private/
+nbbuild/
+nbdist/
+.nb-gradle/
+
+# =========================
+# 操作系统缓存文件
+# =========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# =========================
+# 环境变量 & 临时文件
+# =========================
+*.env
+*.tmp
+*.bak
+*.swp
+
+# =========================
+# Java 特定工具
+# =========================
+
+# JRebel
+rebel.xml
+
+# Spring Tool Suite
+.springBeans
+
+# =========================
+# 其他
+# =========================
+# 日志 & 临时文件
+logs/
+*.log
+
+# 生成的 API 文档
+
+# JetBrains Fleet
+.fleet/
+.run/
+
+## Projects
+./backup
+module_dev_references/
+backup/
+backup.sh
+dependency-egps/
+debug/
+egps.shell/
+wntevol/
