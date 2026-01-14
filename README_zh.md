@@ -34,7 +34,7 @@
 
 ```mermaid
 graph TD
-  base[egps-base] --> shell[egps-shell<br/>(包含 GUI 主框架)]
+  base[egps-base] --> shell["egps-shell（包含GUI主框架）"]
   shell --> pe[egps-pathway.evol.browser]
   shell --> tq[egps-TQTools]
 ```
@@ -51,7 +51,7 @@ graph TD
 
 ```mermaid
 graph TD
-  shell[egps-shell<br/>(GUI 主框架)] --> pe[egps-pathway.evol.browser]
+  shell["egps-shell（GUI主框架）"] --> pe[egps-pathway.evol.browser]
   shell --> tq[egps-TQTools]
   shell --> mut[egps-mutationPre]
   shell --> venn[egps-vennplot]

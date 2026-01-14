@@ -34,7 +34,7 @@ Their dependencies are roughly:
 
 ```mermaid
 graph TD
-  base[egps-base] --> shell[egps-shell]
+  base[egps-base] --> shell["egps-shell (GUI mainframe)"]
   shell --> pe[egps-pathway.evol.browser]
   shell --> tq[egps-TQTools]
 ```
@@ -51,7 +51,7 @@ These modules are at the same level as `egps-pathway.evol.browser` / `egps-TQToo
 
 ```mermaid
 graph TD
-  shell[egps-shell<br/>(GUI mainframe)] --> pe[egps-pathway.evol.browser]
+  shell["egps-shell (GUI mainframe)"] --> pe[egps-pathway.evol.browser]
   shell --> tq[egps-TQTools]
   shell --> mut[egps-mutationPre]
   shell --> venn[egps-vennplot]
