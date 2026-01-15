@@ -4,6 +4,8 @@
 
 如果你是终端不熟悉的普通用户，你不需要了解内部模块结构，也不需要使用命令行：只要下载打包好的发布版本，解压后双击启动即可。
 
+Go to [Releases](https://github.com/yudalang3/eGPS_v2.1/releases) to download.
+
 [English README](README.md)
 
 ## eGPS2 是什么？
@@ -41,23 +43,21 @@ graph TD
 
 本集合中的其他独立应用模块（示例）：
 
-- `egps-mutationPre`：基因组突变展示
-- `egps-vennplot`：Venn 图
+- `egps-mutationPre`：基因组突变展示（依赖于 egps-pathway.evol.browser）
+- `egps-sanky-venn`：桑基图与Venn图（合并模块）
 - `egps-heatmap`：热图
 - `egps-chorddiagram`：弦图
-- `egps-sanky`：桑基图
 
-这些模块和`egps-pathway.evol.browser`/`egps-SeqTools` 平级
+这些模块大部分和`egps-pathway.evol.browser`/`egps-SeqTools` 平级，但 `egps-mutationPre` 依赖于 `egps-pathway.evol.browser`。
 
 ```mermaid
 graph TD
   shell["egps-shell（GUI主框架）"] --> pe[egps-pathway.evol.browser]
   shell --> seq[egps-SeqTools]
-  shell --> mut[egps-mutationPre]
-  shell --> venn[egps-vennplot]
+  pe --> mut[egps-mutationPre]
+  shell --> sankyvenn[egps-sanky-venn]
   shell --> heat[egps-heatmap]
   shell --> chord[egps-chorddiagram]
-  shell --> sanky[egps-sanky]
 ```
 
 当然您也可以在 `egps-pathway.evol.browser` 这些上层的模块基础上进行项目开发，因为eGPS2的所有功能模块都是开源的。

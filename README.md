@@ -4,6 +4,8 @@ This folder is the **final release workspace** for the eGPS2 software platform.
 
 If you are an end user and not familiar with the terminal, you do **not** need to learn the internal modules or use the command line: just download the packaged release, unzip it, and double-click the launcher.
 
+Go to [Releases](https://github.com/yudalang3/eGPS_v2.1/releases) to download.
+
 [中文版 README](README_zh.md)
 
 ## What is eGPS2?
@@ -41,23 +43,21 @@ graph TD
 
 Other standalone application modules in this collection (examples):
 
-- `egps-mutationPre`: genomic mutation presenter
-- `egps-vennplot`: Venn plot
+- `egps-mutationPre`: genomic mutation presenter (depends on egps-pathway.evol.browser)
+- `egps-sanky-venn`: Sankey plot and Venn plot (merged module)
 - `egps-heatmap`: heatmap plot
 - `egps-chorddiagram`: chord diagram
-- `egps-sanky`: Sankey plot
 
-These modules are at the same level as `egps-pathway.evol.browser` / `egps-SeqTools`.
+Most of these modules are at the same level as `egps-pathway.evol.browser` / `egps-SeqTools`, except `egps-mutationPre` which depends on `egps-pathway.evol.browser`.
 
 ```mermaid
 graph TD
   shell["egps-shell (GUI mainframe)"] --> pe[egps-pathway.evol.browser]
   shell --> seq[egps-SeqTools]
-  shell --> mut[egps-mutationPre]
-  shell --> venn[egps-vennplot]
+  pe --> mut[egps-mutationPre]
+  shell --> sankyvenn[egps-sanky-venn]
   shell --> heat[egps-heatmap]
   shell --> chord[egps-chorddiagram]
-  shell --> sanky[egps-sanky]
 ```
 
 Of course, you can also develop your own projects on top of the upper-level modules (e.g. `egps-pathway.evol.browser`) because the eGPS2 functional modules are open sourced.
